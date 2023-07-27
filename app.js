@@ -39,5 +39,5 @@ db.getConnection().then((connection) =>
     console.log(`Server is Started... ${new Date()}`)
 );
 
-const server = app.listen(8080);
+const server = app.listen(3000);
 initSocket(server);
