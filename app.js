@@ -21,23 +21,25 @@ app.use(helmet());
 app.use(cors(corsOption));
 app.use(morgan('tiny'));
 
-app.use('/tweets', tweetsRoute);
-app.use('/auth', authRoute);
+// app.use('/tweets', tweetsRoute);
+// app.use('/auth', authRoute);
 
-// 파일경로가 없을때
-app.use((req, res, next) => {
-    res.sendStatus(404);
-});
+// // 파일경로가 없을때
+// app.use((req, res, next) => {
+//     res.sendStatus(404);
+// });
 
-// 서버애러
-app.use((error, res, next) => {
-    console.error(error);
-    res.sendStatus(500);
-});
+// // 서버애러
+// app.use((error, res, next) => {
+//     console.error(error);
+//     res.sendStatus(500);
+// });
 
-db.getConnection().then((connection) =>
-    console.log(`Server is Started... ${new Date()}`)
-);
+// db.getConnection().then((connection) =>
+//     console.log(`Server is Started... ${new Date()}`)
+// );
 
-const server = app.listen(config.port.port);
-initSocket(server);
+app.listen(config.port.port);
+
+// const server = app.listen(config.port.port);
+// initSocket(server);
