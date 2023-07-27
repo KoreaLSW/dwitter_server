@@ -39,6 +39,10 @@ app.use(morgan('tiny'));
 //     console.log(`Server is Started... ${new Date()}`)
 // );
 
+app.get('/', (req, res, next) => {
+    res.end('Hello~');
+});
+
 app.listen(config.port.port);
 
 // const server = app.listen(config.port.port);
