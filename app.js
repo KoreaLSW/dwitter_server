@@ -43,7 +43,7 @@ app.get('/', (req, res, next) => {
     res.end('Hello~');
 });
 
-app.listen(config.port.port);
+app.listen(8080);
 
 // const server = app.listen(config.port.port);
 // initSocket(server);
